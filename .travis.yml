@@ -1,8 +1,12 @@
-language: node_js
+language: python
+python:
+  - "2.7"
 addons:
   username: "enrisanbe"
   access_key: "d7bbcdbd-e887-492a-88f8-82bd13151e47"
+install: "pip install -r requirements.txt"
 before_script:
   - python -m SimpleHTTPServer &
   - sleep 2
-  
+script: lettuce 
+
